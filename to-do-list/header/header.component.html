@@ -1,0 +1,44 @@
+<nav class="navbar text-white bg-primary mr-0 pr-0">
+  <div class="row mr-0">
+
+    <div class="header col-4">
+      <div class="row">
+        <div>
+          <i class="fas fa-th"></i>
+        </div>
+        <div>
+          To Do
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <input class="form-control mt-1" type="search" placeholder="Search" aria-label="Search" />
+    </div>
+    <div class="col-5 pr-0">
+      <div class="row justify-content-end pt-1">
+        <div>
+          <i class="fas fa-cog  pr-4 mr-2"></i>
+        </div>
+        <div>
+          <i class="fas fa-question pr-4 mr-2"></i>
+        </div>
+        <div>
+          <i class="fas fa-bullhorn pr-4 mr-2"></i>
+        </div>
+        <div>
+          R
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- <div class="d-flex">
+<app-category></app-category>
+<app-tasks *ngIf="showTaskContainer"></app-tasks>
+<app-steps></app-steps>
+</div> -->
+  <div class="row">
+      <app-category class="category col-3 pl-5"></app-category>
+      <app-tasks class="{{showAppTasks}} pl-3 "></app-tasks>
+      <app-steps class="{{showAppSteps}}"></app-steps>
+  </div>

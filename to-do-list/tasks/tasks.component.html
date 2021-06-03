@@ -1,0 +1,21 @@
+<div >
+    <h5 class="text-primary pt-3">{{categoryName}}</h5>
+    <div class="" *ngIf="categoryNamePresent">
+        <div class="pt-3 text-primary border-bottom pb-2">
+            <i class="fa fa-plus"></i>
+            <input type="text" [(ngModel)]="taskName" (keyup.enter)="addTask()" placeholder="New Task" class="pl-3" />
+        </div>
+        <div>
+            <div>
+                <div *ngFor='let task of taskList' class="ml-1 pt-2 pb-2 border-bottom">
+                    <span class="round">
+                        <input type="checkbox" id="checkbox" />
+                        <label for="checkbox"></label>
+                    </span>
+                    <span id="{{task.taskId}}" (click)="createStep(task.taskId, task.categoryId)"
+                        class="pl-3">{{task.taskName}}</span><i class="far fa-star important float-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row ">
+    <div>
+        <div class="ul">
+            <div class="li pt-3" *ngFor="let category of categoryList">
+                <i class="{{category.icon}} text-secondary pr-3"></i>
+                <span id="{{category.id}}" (click)="createTask(category.id)" class="">{{category.name}}</span>
+            </div>
+        </div>
+        <div class="pl-1 pt-3 mt-1">
+            <i class="fa fa-plus text-secondary pr-2 "></i>
+            <input type="text" class="category-input-bar text-primary pl-2" (keyup.enter)="addNewCategory()" 
+            [(ngModel)]="newCategoryName" value="newCategoryName" placeholder="New list" />
+        </div>
+    </div>
+</div>
